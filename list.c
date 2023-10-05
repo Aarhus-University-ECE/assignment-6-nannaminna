@@ -19,10 +19,18 @@ void add(node *head, int x) {
   p->next = element;
 }
 
-// exersice 3.b
+// exercise 3.b
 int size(node *l) {
+  assert(l != NULL);
+  node *p = l->next;
+  int i;
 
-	return 0;
+  while (p != NULL)
+  {
+    ++i;
+    p = p->next;
+  }
+	return i;
 }
 
 // exersice 3.c and 3.d

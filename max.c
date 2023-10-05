@@ -5,8 +5,17 @@
 int max(int *numbers, int size) {
   // Excercise 2
   // Implement your code below...
-
-  return -1;
+  assert(size>0);
+  int m = numbers[0];
+  for(int i=1; i < size; ++i)
+  {
+    int element = numbers[i];
+    if(element>m)
+    {
+      m=element;
+    } 
+  }
+  return m;
 }
 
 #ifndef TEST
