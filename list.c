@@ -23,7 +23,7 @@ void add(node *head, int x) {
 int size(node *l) {
   assert(l != NULL);
   node *p = l->next;
-  int i;
+  int i = 0;
 
   while (p != NULL)
   {
@@ -40,18 +40,26 @@ void printout(node *l) {
   // post: The values of the list are printed out
   node *p = l->next;
   while (p != NULL) {
+    p=p->next;
     printf("%d, ", p->data);
   }
   printf("\n");
 }
 
-// exersice 3.e
+// exercise 3.e
 int largest(node *l) {
-  // pre:  head poinst to the first, empty element.
+  // pre:  head points to the first, empty element.
   // 	     The last element's next is NULL.
   // post: Returns the largest value of the list
-
-  return 0;
+  node *p = l->next;
+  int max = p->data;
+  while(p != NULL)
+  {
+    if(p->data>max)
+    {max=p->data;}
+    p=p->next;
+  }
+  return max;
 }
 
 #ifndef TEST

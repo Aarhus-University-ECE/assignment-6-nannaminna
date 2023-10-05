@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int max(int *numbers, int size) {
-  // Excercise 2
+  // Exercise 2
   // Implement your code below...
   assert(size>0);
   int m = numbers[0];
